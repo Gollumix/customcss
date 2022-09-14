@@ -1,0 +1,708 @@
+@import url(https://css.reizu.moe/uwu/uwu.css);
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+:root {
+	--text-color: #3f3f3f;
+	--accent-color: white;
+	--health-color: lightgreen;
+	--ammo-color: yellow;
+	--premium-color: red;
+	--verified-color: red;
+	--menu-bg-color: rgba(255, 255, 255, 1);
+	--menu-bg-color-secondary: rgba(230, 230, 230, 1);
+	--ingame-bg-color: rgba(15, 15, 15, .2);
+	--text-transform: none;
+}
+
+#profileImg {
+    display: none;
+    border: 0;
+    width: 0;
+    height: 0;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    border-radius: 60px;
+    cursor: pointer;
+    border: none;
+}
+
+#navButtons {
+    top: 3px;
+    position: absolute;
+    z-index: 11;
+    display: inline-block;
+    right: -7%;
+    transform: translate(-50%,0);
+}
+
+#hubBox {
+    display: none;
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 5px;
+    vertical-align: top;
+    font-size: 30px;
+    color: rgba(255,255,255,.82);
+    background-color: #4287f5;
+    border-radius: 5px;
+}
+
+#navTitle {
+    top: 12px;
+    position: absolute;
+    font-size: 0;
+    color: #fff;
+    z-index: 11;
+    right: 20px;
+    cursor: pointer;
+}
+
+.terms {
+    line-height: 63px;
+    font-size: 18px;
+    vertical-align: top;
+    cursor: pointer;
+    color: #2196f3;
+    text-decoration: none;
+    pointer-events: all;
+    display: none;
+}
+
+#steamDB {
+    position: absolute;
+    bottom: 22px;
+    right: 500px;
+    width: 0;
+    height: auto;
+    cursor: pointer;
+    -webkit-transition: .2s;
+    transition: .2s;
+    pointer-events: all;
+}
+
+#iosDB {
+    position: absolute;
+    bottom: 38px;
+    right: 284px;
+    width: 0;
+    height: auto;
+    cursor: pointer;
+    -webkit-transition: .2s;
+    transition: .2s;
+    pointer-events: all;
+}
+
+#androidDB {
+    position: absolute;
+    bottom: 20px;
+    right: 5px;
+    width: 0;
+    height: auto;
+    cursor: pointer;
+    -webkit-transition: .2s;
+    transition: .2s;
+    pointer-events: all;
+}
+
+#editrDB {
+    position: absolute;
+    bottom: 20px;
+    left: 100px;
+    width: 0;
+    height: auto;
+    transition: .2s;
+}
+
+.bigMenTab {
+    text-align: center;
+    display: table-cell;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    line-height: 45px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    background: transparent;
+}
+
+.marketCard {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 10px;
+    width: 210px;
+    height: 215px;
+    vertical-align: top;
+    border-radius: 5px;
+    display: inline-block;
+    z-index: 1;
+    pointer-events: auto;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    background: linear-gradient(to top, #66ffff 0%, #339966 100%);
+}
+
+.cardActions {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #4d4d4d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    color: rgba(255,255,255,.5);
+    font-size: 12px;
+}
+
+#termsInfo {
+    display: none;
+}
+
+.custContainer {
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: none;
+    margin-top: 5px;
+    width: 46.9%;
+    height: 150px;
+    opacity: .7;
+}
+
+.menuSocialB {
+    display: none !important;
+}
+
+#customizeButton {
+    display: inline-block;
+    width: 300px;
+    text-align: center;
+    padding: 15px;
+    font-size: 27px!important;
+    pointer-events: all;
+    padding-bottom: 22px;
+    border: none;
+}
+
+.customizeButton {
+    border: none;
+}
+
+.customizeButton:hover {
+    border: none;
+}
+
+
+.selectedItem {
+    border: none;
+}
+
+.selectedItem:hover {
+    border: none;
+}
+
+.selectorItem {
+    background-color: transparent;
+    border: none;
+}
+
+.selectorItem:hover {
+    background-color: transparent;
+    border: none;
+}
+
+#menuItemContainer {
+    background: transparent;
+}
+
+.classLvl {
+    color: var(--text-color);
+      text-align: center;
+}
+
+.hostOpt {
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+}
+
+
+.tabHeader {
+    color: var(--accent-color);
+}
+
+.tabHeader:hover {
+    color: #fff;
+    border-bottom: none;
+}
+
+.tabHeader.selected {
+    color: #fff;
+    border-bottom: none;
+}
+
+.endSection {
+    background-color: transparent;
+}
+
+.gfSection {
+    background-color: transparent;
+}
+
+.modeStatus {
+    color: var(--accent-color) !important;
+}
+
+.fundsVal {
+    color: #fff;
+}
+
+.headerBarLeft {
+    border-radius: 0;
+    background-color: transparent;
+}
+
+.headerBarRight {
+    border-radius: 0;
+    background-color: transparent;
+}
+
+.verticalSeparator {
+    visibility: hidden;
+}
+
+.headerBarRight .verticalSeparator {
+    }
+
+.verticalSeparatorInline {
+    visibility: hidden;
+    height: 0;
+}
+
+
+
+.button:hover {
+    background-color: transparent !important;
+    color: #fff !important;
+    -webkit-transform: none;
+    transform: none;
+    border: none;
+}
+
+.button.small {
+    font-size: 18px !important;
+    text-shadow: none !important;
+    box-shadow: none !important; 
+    border: none;
+}
+
+.button.small:hover {
+    background-color: transparent !important;
+    border: none;
+}
+
+.buttonPI {
+    border: none !important;
+}
+
+.buttonPI:hover {
+    border: none;
+}
+
+.buttonR {
+    box-shadow: none !important;
+    border: none;
+}
+
+.buttonR:hover {
+    box-shadow: none !important;
+    border: none;
+}
+
+.buttonP {
+    border: none !important;
+}
+
+.buttonP:hover {
+    border: none !important;
+}
+
+.buttonG {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.buttonG:hover {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.button.lgn {
+    position: absolute;
+    left: 0;
+    width: max-content !important;
+    padding-left: 22px !important;
+    margin-left: 8px !important;
+    font-size: 18px !important;
+    border: none;
+}
+
+.button.lgn .material-icons {
+    display: none;
+}
+
+.button {
+    background-color: transparent !important;
+    color: white;
+    border: none;
+}
+
+.settText {
+    border: none;
+}
+
+.imageButton {
+    display: none !important;
+}
+
+.menuTabsNew {
+    border-radius: 0;
+    background-color: transparent;
+}
+
+.hostOpt {
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+}
+
+.loadoutBtn {
+    background-color: transparent;
+    color: var(--accent-color);
+    font-size: 18px;
+}
+    
+}
+
+.classImgC {
+    border-radius: 10px;
+}
+
+.classXPBar {
+    display: none;
+}
+
+.menuItem .menuItemIcon {
+    position: relative;
+    width: 100%;
+    height: 45%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.serverHeader {
+    background-color: transparent;
+    position: relative;
+}
+
+.classHP {
+    display: none !important; 
+}
+
+.customizebtn {
+    background-color: transparent;
+    border: none;
+}
+
+#loadoutSelect {
+    background-color: transparent !important;
+    border-radius: 10px !important;
+}
+
+.loadoutBtn {
+    background-color: transparent;
+    color: var(--text-color);
+    font-size: 18px;
+    border-radius: 40px;
+    
+}
+
+.searchBtn {
+    background-color: transparent;
+    color: var(--text-color);
+    border-radius: 40px;
+}
+
+.hostPresetBtn {
+    background-color: transparent;
+    border-radius: 40px;
+}
+
+.settingsBtn {
+    background-color: transparent;
+    font-size: 14px;
+    border: none; 
+}
+
+.xpBar {
+    height: 20px;
+    background-color: white;
+    padding: 0;
+    border-radius: 10px;
+}
+
+.accountButton {
+    background-color: transparent;
+    color: var(--text-color);
+    width: 100px;
+    font-size: 18px;
+}
+
+.standout::before {
+    content: 'css made by MrGollumGames';
+    font-size: 18px;
+    margin-right: 22px;
+    color: rgba(255, 255, 255, .5);
+    visibility: visible;
+}
+
+
+@font-face {
+	font-family: Kanit;
+}
+
+@font-face {
+	font-family: Kanit;
+}
+
+#newsHolder {
+	display: none;
+}
+
+.topRightCounters {
+	position: unset;
+	bottom: unset;
+	right: unset;
+	border-radius: 30px; 
+}
+
+.countIcon {
+	padding: 10px;
+}
+
+#killStreakHolder {
+    bottom: 80px;
+}
+
+#challIcon {
+	position: fixed;
+	width: 40px;
+	height: 40px;
+	left: 50px;
+	bottom: 55px;
+	filter: brightness(0) invert(1) drop-shadow(2px 2px 3px rgba(30, 30, 30, .5));
+	display: none;
+}
+
+#ammoIcon {
+	position: fixed;
+	width: 40px;
+	height: 40px;
+	right: 50px;
+	bottom: 55px;
+	margin-right: 0;
+	margin-left: 0;
+	filter: brightness(0) invert(1) drop-shadow(2px 2px 3px rgba(30, 30, 30, .5));
+	display: none;
+}
+
+#healthValue {
+	position: fixed;
+	left: 50px;
+	bottom: 50px;
+	font-size: 50px;
+}
+
+#ammoDisplay {
+	width: 40px;
+	height: 5px;
+	top: calc(50% + 35px);
+	left: calc(50% - 25px);
+	display: none;
+}
+
+#ammoVal {
+	position: fixed;
+	font-size: 40px;
+	right: 50px;
+	bottom: 50px;
+}
+
+#weapDisplay {
+	display: none !important;
+}
+
+#reloadMsg {
+	text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+}
+
+#chatHolder {
+    bottom: 175px !important;
+    left: 20px !important;
+    border-radius: 30px;
+    background-color: transparent;
+}
+
+#uiBase.onMenu #chatHolder {
+    bottom: 20px !important
+}
+
+#timerDisplay {
+	width: 140px;
+	height: 50px;
+	background-color: transparent;
+	will-change: unset;
+}
+
+#timerVal {
+	font-size: 50px;
+	padding-left: 0;
+	will-change: unset;
+	text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+}
+
+#teamScores {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 685px;
+	height: 50px;
+	padding: 10px;
+	padding-left: 0;
+	padding-top: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+	margin-left: 0;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+	border-radius: 30px;
+	background-color: transparent;
+	text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+}
+
+.tScore {
+	display: inline-block;
+}
+
+#tScoreV1 {
+	position: fixed;
+	left: -25%;
+	top: 4px;
+}
+
+#tScoreV2 {
+	position: fixed;
+	left: 25%;
+	top: 4px;
+}
+
+.tScoreT {
+	width: 100%;
+	margin-top: 20px;
+	text-align: center;
+	font-size: 24px;
+	color: #fff;
+	text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+	z-index: 2;
+}
+
+.tScoreM {
+	display: none;
+}
+
+.tScoreF {
+	left: 50%;
+	width: 100px;
+	height: 80px;
+	margin-left: 123px;
+	margin-right: 116px;
+	padding-left: 0;
+	padding-right: 0;
+	background-color: #eb5656;
+	color: transparent;
+	opacity: 50%;
+	z-index: 1;
+}
+
+.tScoreF.you {
+	background-color: #5699eb;
+	color: transparent;
+	opacity: 50%;
+	z-index: 1;
+}
+
+.tScoreC {
+	left: 50%;
+	width: 100px;
+	height: 80px;
+	margin-left: 123px;
+	margin-right: 116px;
+	background-color: var(--accent-color);
+	opacity: 50%;
+	z-index: 1;
+}
+
+.tScoreC.you {
+	background-color: #fff;
+	opacity: 50%;
+	z-index: 1;
+}
+
+#gameMessage {
+	top: 90px;
+	font-size: 18px;
+	border-radius: 30px; 
+}
+
+#ingameFPS {
+	color: #b01313 !important;
+	visibility: visible;
+	text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+}
+
+#pingText {
+	color: #b01313 !important;
+	text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+}
+
+#pingIcon {
+	color: white !important;
+	text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+	display: none !important;
+}
+
+#pingDisplay .material-icons {
+	font-size: 30px;
+	text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+}
